@@ -28,6 +28,89 @@
   color: #61dafb;
 }
 
+.my-grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.my-grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.my-grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.my-grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.my-grid-cols-7 {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+.my-grid-cols-8 {
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+.my-grid-cols-9 {
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+.my-grid-cols-10 {
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+}
+
+.estado-x,
+.estado-o{
+  position: relative;
+}
+
+.estado-x::after,
+.estado-x::before{
+  content: '';
+  position: absolute;
+  background-color: blue;
+  width: calc(60% * 1.4142);
+  height: 5px;
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.estado-x::after{
+  transform: translate(-50%, -50%) rotate(45deg);
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -moz-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  -o-transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.estado-x::before{
+  transform: translate(-50%, -50%) rotate(-45deg);
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+  -moz-transform: translate(-50%, -50%) rotate(-45deg);
+  -ms-transform: translate(-50%, -50%) rotate(-45deg);
+  -o-transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.estado-o::before{
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  border: 5px solid red;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
